@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>UserForm</title>
+</head>
+<style>
+    *{margin: 0; padding: 0;}
+    h1{text-align: center; margin-bottom: 40px;}
+    
+    .form-wrap{width: 320px; height: 420px; background: rgb(243, 243, 241);  padding: 40px 20px; box-sizing: border-box; position: fixed; left: 50%; top: 50%;
+    transform: translate(-50%, -50%); }
+    input{width: 100%; border-radius: 3px; border: 1px; padding: 6px 20px; box-sizing: border-box; margin-bottom: 30px;}
+    .btn{
+        
+       
+    }
+    </style>
+<body>
+  
+      <h1 align ="center">You can add you Faverite Dish Recipe</h1>
+      <div class="form-wrap">
+          <form method="GET" action="usrRecipe.html">
+              <h1>Recipe Form</h1>
+                      <input type="text" id="txt" placeholder="Name"><br>
+               <input type="number"  id = "txt1" placeholder="Contact No."><br>
+            <input type="text"  id  = "txt2" placeholder="Recipe Name"><br>
+            <input type="file" id="file" />
+            <div class="btn">
+                
+            
+              <button type="submit" value="Upload" onclick="parsvalue();" style = "width: 100px; height: 20px;"> Upload </button> 
+                  <button type="reset" value="Reset" onclick="" style = "width: 100px; height: 20px;">Reset</button>
+              
+
+
+              </div>
+            
+              </form>
+          </div>
+          
+          <script>
+              function parsvalue() {
+                        var name = document.getElementById("txt").value;
+                        localStorage.setItem("textvalue", name);
+
+                        var contact = document.getElementById("txt2").value;
+                        localStorage.setItem("textvalue1", contact);
+
+                        var title = document.getElementById("txt3").value;
+                        localStorage.setItem("textvalue2", title);
+
+                        var file = document.getElementById("file").value;
+                        localStorage.setItem("textvalue3", file);
+                      }
+                    </script>
+</body>
+</html>
